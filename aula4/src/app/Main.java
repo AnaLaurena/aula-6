@@ -30,19 +30,25 @@ public class Main {
 				Banco novoBanco =new Banco (nomeBanco);
 				mensagem.mostrarMensagemDeSucesso("Banco Cadastrado com sucesso" 
 						+ novoBanco.getBanco());
-				break;
+			break;
+			
+			case 2:
+				Nome = mensagem.solicitarEntrada("Digite o seu nome");
+				CPF = mensagem.solicitarEntrada("Digite o seu CPF");
+				Celular = mensagem.solicitarEntrada("Digite o seu Celular");
+				Email = mensagem.solicitarEntrada("Digite o seu Email");
+				Senha = mensagem.solicitarEntrada("Digite o seu Senha");
+				Usuario usuario = new Usuario (Nome,CPF,Celular,Email,Senha);
+				mensagem.mostrarMensagemDeSucesso(usuario.getUsuario());
+			break;
+			
+			case 3:
+				System.exit(O);
+			break;
 			}
 			
-			Nome = mensagem.solicitarEntrada("Digite o seu nome");
-			CPF = mensagem.solicitarEntrada("Digite o seu CPF");
-			Celular = mensagem.solicitarEntrada("Digite o seu Celular");
-			Email = mensagem.solicitarEntrada("Digite o seu Email");
-			Senha = mensagem.solicitarEntrada("Digite o seu Senha");
-			Usuario usuario = new Usuario (Nome,CPF,Celular,Email,Senha);
-			mensagem.mostrarMensagemDeSucesso(usuario.getUsuario());
-			opcao ="ok";
 			
-		}while (opcao == "ok");
+		}while (opcaoNum == 3);
 	}
 
 }
